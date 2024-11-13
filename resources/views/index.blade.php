@@ -84,7 +84,11 @@
                 method: 'POST',
                 data: formData,
                 success: function(data) {
+                    $('#productForm')[0].reset();
                     alert('Product created successfully!');
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000)
                 },
                 error: function(xhr, status, error) {
                     console.error('Error:', error);
