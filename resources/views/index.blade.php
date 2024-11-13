@@ -144,15 +144,11 @@
                 method: 'PUT',
                 data: formData,
                 success: function(data) {
-                    if (data.success) {
-                        alert('Product updated successfully!');
-                        $('#editProductModal').modal('hide');
-                        setTimeout(() => {
-                            location.reload();
-                        }, 1000)
-                    } else {
-                        alert('Failed to update product.');
-                    }
+                    alert('Product updated successfully!');
+                    $('#editProductModal').modal('hide');
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1000)
                 },
                 error: function(xhr, status, error) {
                     console.error('Error:', error);
