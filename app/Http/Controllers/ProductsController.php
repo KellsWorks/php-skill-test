@@ -35,7 +35,7 @@ class ProductsController extends Controller
         ], 201);
     }
 
-    public function edit(Request $request, $id) {
+    public function edit($id, Request $request) {
         $validator = Validator::make($request->all(), [
             'name' => 'required|unique:products',
             'quantity' => 'required|integer',
